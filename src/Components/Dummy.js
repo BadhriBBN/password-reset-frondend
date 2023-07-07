@@ -10,7 +10,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:7789/sendmail", {
+      const response = await axios.post("http://localhost:9090/sendmail", {
         email,
       });
       console.log(response.data);

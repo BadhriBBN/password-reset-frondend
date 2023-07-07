@@ -7,7 +7,7 @@ const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState("");
+  const [ setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,7 +16,7 @@ const RegisterPage = () => {
       return;
     }
     try {
-      const res = await axios.post("https://password-reset-backend-84ia.onrender.com/register", { email, password });
+      const res = await axios.post("https://password-reset-backend-gtpu.onrender.com/register", { email, password });
       console.log(res.data);
       alert('Registered Successfully');
       setEmail("");

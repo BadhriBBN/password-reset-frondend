@@ -14,7 +14,7 @@ const Login = () => {
   },
   onSubmit:async (values)=>{
       try {
-      const login= await axios.post("https://password-reset-backend-84ia.onrender.com/login",values);
+      const login= await axios.post("https://password-reset-backend-gtpu.onrender.com/login",values);
       window.localStorage.setItem("token",login.data.token)
       navigate("/welcome-page")
       } catch (error) {

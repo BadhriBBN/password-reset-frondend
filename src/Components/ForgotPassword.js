@@ -10,7 +10,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("https://password-reset-backend-84ia.onrender.com/sendmail",{email});
+      const response = await axios.post("https://password-reset-backend-gtpu.onrender.com/sendmail",{email});
       console.log(response.data);
       alert(' OTP sent to your mail successfully')
       setShowModal(true);
