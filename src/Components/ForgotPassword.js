@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 
 const ForgotPassword = () => {
   const [showModal, setShowModal] = useState(false);
   const [email, setEmail] = useState("");
   const [verificationCode, setVerificationCode] = useState("");
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("https://password-reset-backend-gtpu.onrender.com/sendmail",{email});
+      const response = await axios.post("https://password-reset-backend1.onrender.com/sendmail",{email});
       console.log(response.data);
       alert(' OTP sent to your mail successfully')
       setShowModal(true);

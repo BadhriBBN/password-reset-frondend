@@ -16,7 +16,7 @@ const RegisterPage = () => {
       return;
     }
     try {
-      const res = await axios.post("https://password-reset-backend-gtpu.onrender.com/register", { email, password });
+      const res = await axios.post("https://password-reset-backend1.onrender.com/register", { email, password });
       console.log(res.data);
       alert('Registered Successfully');
       setEmail("");
